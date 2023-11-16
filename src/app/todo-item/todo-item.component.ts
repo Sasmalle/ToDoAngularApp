@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-todo-item',
@@ -9,5 +10,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './todo-item.component.css'
 })
 export class TodoItemComponent {
-
+  private itemSerice = inject(ItemService);
 }
+/* export class TodoListItems{
+  titoloTask= ``;
+  completa= false;
+  taskCompleta(){
+    this.completa= true;
+  }
+  cambiaTitolo(newTitle: string){
+    this.titoloTask= newTitle;
+  }
+}*/ 

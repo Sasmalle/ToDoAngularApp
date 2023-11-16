@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ItemService } from '../item.service';
+
 
 @Component({
   selector: 'app-todo-list',
@@ -9,5 +11,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './todo-list.component.css'
 })
 export class TodoListComponent {
-
+  private itemService = inject(ItemService);
+  giveItem:Function = this.itemService.giveItem;
 }
