@@ -6,10 +6,12 @@ import { TodoListComponent } from './todo-list/todo-list.component';
   providedIn: 'root'
 })
 export class ItemService {
-  addItems(){
-    //va da todoItem a todoList
+  giveItem(text:string){
+    //va da todoList a todoItem
+    console.log(text);
   }
-  giveItem(text:string):string { 
+  addItems(text:string):string{
+    //va da todoItem a todoList
     return text
   }
 }
