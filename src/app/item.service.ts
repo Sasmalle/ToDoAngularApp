@@ -8,10 +8,10 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 export class ItemService {
   giveItem(text:string){
     //va da todoList a todoItem
-    console.log(text);
+    return text;
   }
-  addItems(text:string):string{
+  addItems(text:string){
     //va da todoItem a todoList
-    return text
+    return text;
   }
 }

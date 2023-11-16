@@ -7,7 +7,7 @@
         </ul>
     </section>
     <section class="inputUtente">
-        <input #text placeholder="inserisci task ">
-        <button (click)="giveItem">INVIO</button>
+        <input #text placeholder="inserisci task">
+        <button (click)="giveItem(text.value)">INVIO</button>
     </section>
 </section>

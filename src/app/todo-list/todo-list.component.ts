@@ -11,6 +11,6 @@ import { ItemService } from '../item.service';
   styleUrl: './todo-list.component.css'
 })
 export class TodoListComponent {
-  private itemService = inject(ItemService);
-  giveItem:Function = this.itemService.giveItem;
+  public itemService = inject(ItemService);
+  public giveItem: (text:string) =>any= this.itemService.giveItem;
 }
