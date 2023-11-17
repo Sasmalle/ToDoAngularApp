@@ -1,0 +1,29 @@
+/* Stile dell'elemento della lista */
+.lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Stile del testo dell'elemento */
+  .lista li span {
+    flex-grow: 1;
+  }
+  
+  /* Stile del pulsante Rimuovi */
+  .lista li button {
+    padding: 5px 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Stile del pulsante Rimuovi al passaggio del mouse */
+  .lista li button:hover {
+    background-color: #d84315;
+  }
+  
