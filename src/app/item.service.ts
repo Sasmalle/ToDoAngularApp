@@ -6,12 +6,9 @@ import { TodoListComponent } from './todo-list/todo-list.component';
   providedIn: 'root'
 })
 export class ItemService {
-  giveItem(text:string){
-    //va da todoList a todoItem
-    return text;
-  }
-  addItems(text:string){
-    //va da todoItem a todoList
-    return text;
+  private items: string[] = [];
+  addItem(item: string) {
+    this.items.push(item);
+    console.log(this.items);
   }
 }

@@ -11,6 +11,7 @@ import { ItemService } from '../item.service';
 })
 export class TodoItemComponent {
   private itemSerice = inject(ItemService);
+  
 }
 /* export class TodoListItems{
   titoloTask= ``;

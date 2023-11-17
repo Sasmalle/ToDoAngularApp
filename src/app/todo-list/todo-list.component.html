@@ -1,13 +1,11 @@
 <section class="body">
     <section class="lista">
         <ul>
-            <!-- @if () {
-            {{}}
-            } -->
+            <app-todo-item ></app-todo-item>
         </ul>
     </section>
     <section class="inputUtente">
         <input #text placeholder="inserisci task">
-        <button (click)="giveItem(text.value)">INVIO</button>
+        <button (click)="addItem(text.value)">INVIO</button>
     </section>
 </section>
