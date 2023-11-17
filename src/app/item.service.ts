@@ -13,16 +13,15 @@ export class ItemService {
       console.log(this.items);
     } 
     else {
-      console.log(this.getError());
+      console.log("inserisci qualcosa");
     }
   }
   
   getItem(){
     return this.items;
   }
-
-  getError(){
-    return "Inserisci qualcosa"
+  deleteItem(item: string){
+    this.items.splice(this.items.indexOf(item), 1);
   }
   
 }

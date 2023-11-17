@@ -6,15 +6,21 @@ import { ItemService } from '../item.service';
   selector: 'app-todo-item',
   standalone: true,
   imports: [CommonModule],
-  template: `<li *ngFor="let item of items">{{ item }}</li>`,
+  template: `
+  <li *ngFor="let item of items">
+    {{ item }}  
+    <button (click)="deleteItem(item)">Rimuovi</button>
+  </li>
+  `,
   styleUrl: './todo-item.component.css'
 })
 export class TodoItemComponent {
-  private ItemService = inject(ItemService);
-  items: string[] = [];
-
+  public ItemService = inject(ItemService);
+  items: any;
+  deleteItem(item: string) {
+    this.ItemService.deleteItem(item);
+  }
   constructor(private itemService: ItemService) {
     this.items = this.itemService.getItem();
   }
-
 }
