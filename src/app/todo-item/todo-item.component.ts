@@ -6,20 +6,15 @@ import { ItemService } from '../item.service';
   selector: 'app-todo-item',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './todo-item.component.html',
+  template: `<li *ngFor="let item of items">{{ item }}</li>`,
   styleUrl: './todo-item.component.css'
 })
 export class TodoItemComponent {
-  private itemSerice = inject(ItemService);
-  
+  private ItemService = inject(ItemService);
+  items: string[] = [];
+
+  constructor(private itemService: ItemService) {
+    this.items = this.itemService.getItem();
+  }
+
 }
-/* export class TodoListItems{
-  titoloTask= ``;
-  completa= false;
-  taskCompleta(){
-    this.completa= true;
-  }
-  cambiaTitolo(newTitle: string){
-    this.titoloTask= newTitle;
-  }
-}*/ 

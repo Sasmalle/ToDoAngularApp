@@ -1,14 +1,28 @@
 import { Injectable } from '@angular/core';
-import { TodoItemComponent } from './todo-item/todo-item.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
-  private items: string[] = [];
+  public items: string[] = [];
+  public item: string = '';
+  
   addItem(item: string) {
-    this.items.push(item);
-    console.log(this.items);
+    if (item !== '') {
+      this.items.push(item);
+      console.log(this.items);
+    } 
+    else {
+      console.log(this.getError());
+    }
   }
+  
+  getItem(){
+    return this.items;
+  }
+
+  getError(){
+    return "Inserisci qualcosa"
+  }
+  
 }

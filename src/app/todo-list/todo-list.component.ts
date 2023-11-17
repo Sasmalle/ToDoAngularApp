@@ -12,8 +12,8 @@ import { TodoItemComponent } from '../todo-item/todo-item.component';
   styleUrl: './todo-list.component.css'
 })
 export class TodoListComponent {
-  public itemService = inject(ItemService);
-  addItem(text: string) {
-    this.itemService.addItem(text);
+  public ItemService = inject(ItemService);
+  addItem(item: string) {
+    this.ItemService.addItem(item);
   }
 }
